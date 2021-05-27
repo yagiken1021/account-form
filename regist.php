@@ -11,32 +11,32 @@
     <form method="post" action="regist_confirm.php">
         <label>姓</label>
         <br>
-        <input type="text" size="10" name="family_name" pattern="[\u4E00-\u9FFF\u3040-\u309F―]*" required autofocus>
+        <input type="text" size="10" name="family_name" pattern="[\u4E00-\u9FFF\u3040-\u309F―]*" required autofocus value="<?php if(!enpty($_POST['famiry_name'])){echo $_POST['family_name']}?>">
         <br>
         <p id="notice-input-family_name" style="display:none; color:red;">姓が未入力です</p>
         <label>名</label>
         <br>
-        <input type="text" size="10" name="last_name" pattern="[\uu4E00-\u9FFF\u3040-\U309F―]*" required autofocus>
+        <input type="text" size="10" name="last_name" pattern="[\uu4E00-\u9FFF\u3040-\U309F―]*" required autofocus value="<?php if(!enpty($_POST['last_name'])){echo $_POST['last_name']}?>">
         <br>
         <p id="notice-input-last_name" style="display:none; color:red;">名が未入力です</p>
         <label>姓(カナ）</label>
         <br>
-        <input type="text" size="10" name="family_name_kana" pattern="(?=.:?[_u3041-_u30FA])[_u30A1\U30FC]" required autofocus>
+        <input type="text" size="10" name="family_name_kana" pattern="(?=.:?[_u3041-_u30FA])[_u30A1\U30FC]" required autofocus value="<?php if(!enpty($_POST['famiry_name_kana'])){echo $_POST['family_name_kana']}?>">
         <br>
         <p id="notice-input-family_name_kana" style="display:none; color:red;">姓（カナ）が未入力です</p>
         <label>名（カナ）</label>
         <br>
-        <input type="text" size="10" name="last_name_kana" pattern="(?=.:?[_u3041-_u30FA])[_u30A1\U30FC]" required autofocus>
+        <input type="text" size="10" name="last_name_kana" pattern="(?=.:?[_u3041-_u30FA])[_u30A1\U30FC]" required autofocus　value="<?php if(!enpty($_POST['last_name_kana'])){echo $_POST['last_name_kana']}?>">
         <br>
         <p id="notice-input-last_name_kana" style="display:none; color:red;">名（カナ）が未入力です</p>
         <label>メールアドレス</label>
         <br>
-        <input type="email" size="100" name="mail" required autofocus>
+        <input type="email" size="100" name="mail" required autofocus value="<?php if(!enpty($_POST['mail'])){echo $_POST['mail']}?>">
         <br>
         <p id="notice-input-mail" style="display:none; color:red;">メールアドレスが未入力です</p>
         <label>パスワード</label>
         <br>
-        <input type="password" size="10" name="pasword" required autofocus>
+        <input type="password" size="10" name="pasword" required autofocus value="<?php if(!enpty($_POST['password'])){echo $_POST['password']}?>">
         <br>
         <p id="notice-input-password" style="display:none; color:red;">パスワードが未入力です</p>
         <label>性別</label>
@@ -106,17 +106,17 @@
         <p id="notice-select-prefecture" style="display:none; color:red;">住所（都道府県）が未入力です</p>
         <label>住所（市区町村）</label>
         <br>
-        <input type="text" size="10" name="address1" pattern="[^\x20-\x7E]*" required autofocus>
+        <input type="text" size="10" name="address1" pattern="[^\x20-\x7E]*" required autofocus value="<?php if(!enpty($_POST['address1'])){echo $_POST['address1']}?>">
         <br>
         <p id="notice-input-address1" style="display:none; color:red;">住所（市区町村）が未入力です</p>
         <label>住所（番地）</label>
         <br>
-        <input type="text" size="10" name="address2" pattern="[^\x20-\x7E]*" required autofocus>
+        <input type="text" size="10" name="address2" pattern="[^\x20-\x7E]*" required autofocus value="<?php if(!enpty($_POST['address2'])){echo $_POST['address2']}?>">
         <br>
         <p id="notice-input-address2" style="display:none; color:red;">住所（番地）が未入力です</p>
         <label>管理者権限</label>
         <br>
-        <select name="authority">
+        <select name="authority" value="<?php if(!enpty($_POST['authority'])){echo $_POST['authority']}?>">
             <option value="一般" selected>一般</option>
             <option value="管理者">管理者</option>
         </select>
